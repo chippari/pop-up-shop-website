@@ -226,6 +226,18 @@
     padding: 0 2.4rem;
   }
 
+  .main-nav-list {
+    gap: 0rem;
+  }
+
+  .mobile-nav-clientes {
+    margin-right: 2.4rem;
+  }
+
+  .header .mobile-nav-link {
+    display: none;
+  }
+
   .popupshop-logo {
     height: 2.8rem;
   }
@@ -287,6 +299,10 @@
 
   .contador-texto {
     font-size: 1.8rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .footer {
