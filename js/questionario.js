@@ -64,9 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mostra a pergunta atual
     perguntas[index].classList.add('ativa');
-
-    // Rola para o topo da pergunta
-    perguntas[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   // Função para validar se a pergunta foi respondida
