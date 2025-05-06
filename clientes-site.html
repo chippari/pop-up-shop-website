@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Mesmo head da página principal -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionário - PopUpShop</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          src="img/popupshop-logo.png"
+          alt="PopUpShop Logo"
+          class="popupshop-logo"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Home</a></li>
+          <li><a href="index.html#loja" class="main-nav-link">Loja</a></li>
+          <li><a href="index.html#sobre" class="main-nav-link">Sobre</a></li>
+          <li>
+            <a href="index.html#contato" class="main-nav-link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-questionario">
+        <div class="container questionario-container">
+          <!-- Lado esquerdo - Questionário -->
+          <div class="questionario-box">
+            <h2 class="heading-secondary">
+              Encontre as marcas perfeitas para você
+            </h2>
+            <p class="questionario-descricao">
+              Responda algumas perguntas e vamos recomendar marcas que combinam
+              com seu estilo!
+            </p>
+
+            <form class="questionario-form" id="questionarioForm">
+              <!-- Pergunta 1 -->
+              <div class="pergunta-box ativa" data-pergunta="1">
+                <h3 class="heading-tertiary">
+                  1. Qual seu estilo de vestuário preferido?
+                </h3>
+                <div class="opcoes-box">
+                  <label class="opcao">
+                    <input type="radio" name="estilo" value="casual" required />
+                    <span>Casual</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="estilo" value="elegante" />
+                    <span>Elegante</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="estilo" value="bohemio" />
+                    <span>Boho/Boêmio</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="estilo" value="esportivo" />
+                    <span>Esportivo</span>
+                  </label>
+                </div>
+                <button type="button" class="btn btn--full btn-proxima">
+                  Próxima &rarr;
+                </button>
+              </div>
+
+              <!-- Pergunta 2 -->
+              <div class="pergunta-box" data-pergunta="2">
+                <h3 class="heading-tertiary">
+                  2. Que tipo de produtos você mais busca?
+                </h3>
+                <div class="opcoes-box">
+                  <label class="opcao">
+                    <input type="checkbox" name="produtos" value="vestuario" />
+                    <span>Vestuário</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="checkbox" name="produtos" value="acessorios" />
+                    <span>Acessórios</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="checkbox" name="produtos" value="cosmeticos" />
+                    <span>Cosméticos</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="checkbox" name="produtos" value="decoracao" />
+                    <span>Decoração</span>
+                  </label>
+                </div>
+                <div class="botoes-navegacao">
+                  <button type="button" class="btn btn--outline btn-anterior">
+                    &larr; Anterior
+                  </button>
+                  <button type="button" class="btn btn--full btn-proxima">
+                    Próxima &rarr;
+                  </button>
+                </div>
+              </div>
+
+              <!-- Pergunta 3 -->
+              <div class="pergunta-box" data-pergunta="3">
+                <h3 class="heading-tertiary">
+                  3. Qual faixa de preço você normalmente busca?
+                </h3>
+                <div class="opcoes-box">
+                  <label class="opcao">
+                    <input
+                      type="radio"
+                      name="preco"
+                      value="acessivel"
+                      required
+                    />
+                    <span>Acessível (até R$100)</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="preco" value="medio" />
+                    <span>Médio (R$100 - R$300)</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="preco" value="premium" />
+                    <span>Premium (acima de R$300)</span>
+                  </label>
+                </div>
+                <div class="botoes-navegacao">
+                  <button type="button" class="btn btn--outline btn-anterior">
+                    &larr; Anterior
+                  </button>
+                  <button type="button" class="btn btn--full btn-proxima">
+                    Próxima &rarr;
+                  </button>
+                </div>
+              </div>
+
+              <!-- Pergunta 4 -->
+              <div class="pergunta-box" data-pergunta="4">
+                <h3 class="heading-tertiary">
+                  4. Qual desses valores mais combina com você?
+                </h3>
+                <div class="opcoes-box">
+                  <label class="opcao">
+                    <input
+                      type="radio"
+                      name="valores"
+                      value="sustentabilidade"
+                      required
+                    />
+                    <span>Sustentabilidade</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="valores" value="artesanal" />
+                    <span>Produção Artesanal</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="valores" value="design" />
+                    <span>Design Inovador</span>
+                  </label>
+                  <label class="opcao">
+                    <input type="radio" name="valores" value="tradicao" />
+                    <span>Tradição e História</span>
+                  </label>
+                </div>
+                <div class="botoes-navegacao">
+                  <button type="button" class="btn btn--outline btn-anterior">
+                    &larr; Anterior
+                  </button>
+                  <button type="button" class="btn btn--full btn-proxima">
+                    Próxima &rarr;
+                  </button>
+                </div>
+              </div>
+
+              <!-- Pergunta 5 -->
+              <div class="pergunta-box" data-pergunta="5">
+                <h3 class="heading-tertiary">
+                  5. Como prefere receber nossas recomendações?
+                </h3>
+                <div class="opcoes-box">
+                  <div class="input-group">
+                    <label for="email">Seu melhor email:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="seu@email.com"
+                      required
+                    />
+                  </div>
+                  <label class="opcao">
+                    <input type="checkbox" name="newsletter" value="sim" />
+                    <span>Quero receber novidades das marcas recomendadas</span>
+                  </label>
+                </div>
+                <div class="botoes-navegacao">
+                  <button type="button" class="btn btn--outline btn-anterior">
+                    &larr; Anterior
+                  </button>
+                  <button type="submit" class="btn btn--full">
+                    Enviar Respostas
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mensagem de conclusão (inicialmente oculta) -->
+              <div class="mensagem-conclusao">
+                <h3 class="heading-tertiary">
+                  Obrigado por responder nosso questionário!
+                </h3>
+                <p class="conclusao-texto">
+                  Agradecemos pela sua cooperação. Em breve enviaremos para seu
+                  email as marcas que mais combinam com você.
+                </p>
+                <p class="conclusao-texto">
+                  Enquanto isso, que tal dar uma olhada em nossa
+                  <a href="index.html#loja" class="link">loja</a>?
+                </p>
+                <img
+                  src="img/checkmark.png"
+                  alt="Checkmark"
+                  class="checkmark-img"
+                />
+              </div>
+            </form>
+          </div>
+
+          <!-- Lado direito - Marcas e descrição -->
+          <div class="marcas-box">
+            <h3 class="heading-tertiary">Nossas Marcas Parceiras</h3>
+            <p class="marcas-descricao">
+              Trabalhamos com mais de 50 marcas de pequenos empreendedores, cada
+              uma com sua identidade única e produtos especiais.
+            </p>
+
+            <div class="marcas-carrossel-container">
+              <div class="marcas-carrossel">
+                <div class="marca-item">
+                  <img src="img/marcas/marca-1.png" alt="Marca 1" />
+                </div>
+                <div class="marca-item">
+                  <img src="img/marcas/marca-2.png" alt="Marca 2" />
+                </div>
+                <div class="marca-item">
+                  <img src="img/marcas/marca-3.png" alt="Marca 3" />
+                </div>
+                <div class="marca-item">
+                  <img src="img/marcas/marca-4.png" alt="Marca 4" />
+                </div>
+                <div class="marca-item">
+                  <img src="img/marcas/marca-5.png" alt="Marca 5" />
+                </div>
+                <div class="marca-item">
+                  <img src="img/marcas/marca-6.png" alt="Marca 6" />
+                </div>
+                <div class="marca-item">
+                  <img src="img/marcas/marca-7.png" alt="Marca 7" />
+                </div>
+                <div class="marca-item">
+                  <img src="img/marcas/marca-8.png" alt="Marca 8" />
+                </div>
+              </div>
+            </div>
+
+            <div class="marcas-info-box">
+              <h4 class="heading-quaternary">Como fazemos as recomendações?</h4>
+              <p class="marcas-info-text">
+                Nossa inteligência de recomendações analisa suas respostas e
+                encontra marcas que combinam com seu estilo, valores e
+                preferências de compra.
+              </p>
+              <p class="marcas-info-text">
+                Todas as marcas são cuidadosamente selecionadas para garantir
+                qualidade e autenticidade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contato">
+      <div class="container grid grid--footer">
+        <!-- Coluna Logo/Redes Sociais -->
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="img/popupshop-logo-branca.png"
+              alt="PopUpShop logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-pinterest"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2023</span> PopUpShop. Todos os
+            direitos reservados.
+          </p>
+        </div>
+
+        <!-- Coluna Endereço -->
+        <div class="address-col">
+          <p class="footer-heading">Nossa localização</p>
+          <address class="contacts">
+            <p class="address">
+              Rua dos Empreendedores, 123<br />
+              Vila Empreendedora<br />
+              São Paulo - SP, 04567-890
+            </p>
+            <p>
+              <a class="footer-link" href="tel:5511999999999">(11) 99999-9999</a
+              ><br />
+              <a class="footer-link" href="mailto:contato@popupshop.com.br"
+                >contato@popupshop.com.br</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <!-- Coluna Links Úteis -->
+        <nav class="nav-col">
+          <p class="footer-heading">Empresa</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">Sobre nós</a></li>
+            <li><a href="#" class="footer-link">Trabalhe conosco</a></li>
+            <li><a href="#" class="footer-link">Seja um fornecedor</a></li>
+            <li><a href="#" class="footer-link">Política de privacidade</a></li>
+            <li><a href="#" class="footer-link">Termos de uso</a></li>
+          </ul>
+        </nav>
+
+        <!-- Coluna Contato -->
+        <div class="form-col">
+          <p class="footer-heading">Fale conosco</p>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" placeholder="Nome" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="seu@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea
+                id="message"
+                placeholder="Mensagem..."
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn--form">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT CODE -->
+    <script defer src="js/script.js"></script>
+    <script defer src="js/questionario.js"></script>
+  </body>
+</html>

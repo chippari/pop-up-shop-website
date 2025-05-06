@@ -22,8 +22,15 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
 
-    <!-- JAVASCRIPT CODE -->
-    <script defer src="js/script.js"></script>
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <!-- SMOOTH SCROLLING SCRIPT FOR SAFARI  -->
     <script
@@ -35,7 +42,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="#">
+      <a href="index.html">
         <img
           src="img/popupshop-logo.png"
           alt="PopUpShop Logo Photo"
@@ -46,10 +53,10 @@
         <ul class="main-nav-list">
           <li><a href="#loja" class="main-nav-link">Loja</a></li>
           <li>
-            <a href="#clientes" class="main-nav-link">Clientes</a>
+            <a href="clientes-site.html" class="main-nav-link">Clientes</a>
           </li>
           <li>
-            <a href="#empresas" class="main-nav-link">Empresas</a>
+            <a href="empresario.html" class="main-nav-link">Empresas</a>
           </li>
           <li><a href="#sobre" class="main-nav-link">Sobre</a></li>
           <li><a href="#contato" class="main-nav-link">Contato</a></li>
@@ -87,7 +94,7 @@
 
       <section class="section-mais-vendidos">
         <div class="container center-text">
-          <span class="sub-heading">LOJA</span>
+          <span class="sub-heading">Em Alta</span>
           <h2 class="heading-secondary">Os Mais Vendidos</h2>
         </div>
 
@@ -179,17 +186,490 @@
         </div>
       </section>
 
-      <section class="offers-section">
-        <div class="offers-overlay"></div>
-        <div class="offers-container">
-          <h2 class="offers-title">Ofertas Exclusivas</h2>
-          <p class="offers-text">
-            Descubra nossas peças com descontos imperdíveis! Looks incríveis por
-            preços especiais por tempo limitado.
-          </p>
-          <a href="products.html" class="btn offers-btn">Ver Produtos</a>
+      <section
+        class="section-oferta"
+        style="background-image: url('img/oferta-background.jpg')"
+      >
+        <div class="container oferta-container">
+          <div class="oferta-content">
+            <h2 class="heading-oferta">Oferta Imperdível</h2>
+            <p class="oferta-text">
+              Aproveite descontos exclusivos em nossos produtos por tempo
+              limitado. Estilo, conforto e elegância com até
+              <strong>50% OFF</strong>!
+            </p>
+            <a href="#comprar" class="btn btn--full">Comprar Agora</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-produtos" id="loja">
+        <div class="container center-text">
+          <span class="sub-heading">LOJA</span>
+          <h2 class="heading-secondary">Produtos</h2>
+        </div>
+
+        <div class="container grid grid--3-cols margin-right-md">
+          <!-- Produto 1 -->
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-6.avif"
+                alt="Cinto de Couro"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--vestidos">Acessórios</span>
+              </div>
+              <p class="mais-vendidos-title">Cinto de Couro</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>100%</strong> Couro legítimo</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Acabamento <strong>premium</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 2 -->
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-9.avif"
+                alt="Saia Midi Estampada"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--brincos">Roupas</span>
+              </div>
+              <p class="mais-vendidos-title">Saia Midi Estampada</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>Feita</strong> manual</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Fios <strong>naturais</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-7.avif"
+                alt="Bolsa de Palha"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--vestidos">Acessórios</span>
+              </div>
+              <p class="mais-vendidos-title">Bolsa de Palha</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>Feito</strong> Manual</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Palha <strong>natural</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 4 -->
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-5.avif"
+                alt="Camiseta Básica"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--vestidos">Roupas</span>
+              </div>
+              <p class="mais-vendidos-title">Camiseta Básica</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>100%</strong> Algodão</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Corte <strong>moderno</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 5 -->
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-10.avif"
+                alt="Batom Hidratante"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--skin-care">Beleza</span>
+              </div>
+              <p class="mais-vendidos-title">Batom Hidratante</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>Ingredientes</strong> naturais</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Fragrância <strong>suave</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 6 -->
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-8.avif"
+                alt="Brincos de Argola"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--brincos">Acessórios</span>
+              </div>
+              <p class="mais-vendidos-title">Brincos de Argola</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>Alta</strong> Qualidade</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Ouro <strong>18k</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mais-produtos">
+          <a href="#" class="link">Ver todos os produtos &rarr;</a>
+        </div>
+      </section>
+
+      <section class="section-sobre-nos" id="sobre">
+        <div class="container">
+          <div class="grid grid--2-cols grid--center-v">
+            <div class="sobre-nos-img-box">
+              <img
+                src="img/sobre-nos-img.jpg"
+                alt="Equipe PopUpShop"
+                class="sobre-nos-img"
+              />
+            </div>
+            <div class="sobre-nos-text-box">
+              <span class="sub-heading">SOBRE NÓS</span>
+              <h2 class="heading-secondary">Conectando marcas e clientes</h2>
+              <p class="sobre-nos-text">
+                A <strong>PopUpShop</strong> é um marketplace online que conecta
+                marcas de pequenos empreendedores, criando uma experiência de
+                compra única e intuitiva. Aqui, os consumidores podem explorar
+                produtos de forma fácil, por marca ou categoria, enquanto apoiam
+                negócios locais.
+              </p>
+              <p class="sobre-nos-text">
+                Estamos comprometidos em oferecer programas de fidelidade e
+                informações valiosas sobre as marcas, para tornar cada compra
+                mais significativa e envolvente. Junte-se a nós e descubra um
+                mundo de produtos feitos com paixão e dedicação!
+              </p>
+              <a href="#contato" class="btn btn--full margin-right-sm"
+                >Fale Conosco</a
+              >
+              <a href="#loja" class="btn btn--outline">Conheça a Loja</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-clientes" id="clientes">
+        <div class="container center-text">
+          <span class="sub-heading">DEPOIMENTOS</span>
+          <h2 class="heading-secondary">O que nossos clientes dizem</h2>
+        </div>
+
+        <div class="container grid grid--4-cols margin-right-md">
+          <!-- Depoimento 1 -->
+          <div class="depoimento-box">
+            <div class="depoimento-img-box">
+              <img
+                src="img/clientes/cliente-1.jpg"
+                alt="Ana Silva"
+                class="depoimento-img"
+              />
+            </div>
+            <div class="depoimento-text-box">
+              <div class="estrelas-avaliacao">
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+              </div>
+              <blockquote class="depoimento-text">
+                "Adorei a qualidade dos produtos! Comprei um vestido que é
+                perfeito e o atendimento foi excelente."
+              </blockquote>
+              <p class="depoimento-nome">Ana Silva</p>
+            </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div class="depoimento-box">
+            <div class="depoimento-img-box">
+              <img
+                src="img/clientes/cliente-2.jpg"
+                alt="Carlos Mendes"
+                class="depoimento-img"
+              />
+            </div>
+            <div class="depoimento-text-box">
+              <div class="estrelas-avaliacao">
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+              </div>
+              <blockquote class="depoimento-text">
+                "Sempre encontro produtos exclusivos de ótima qualidade. Minha
+                loja favorita para presentear!"
+              </blockquote>
+              <p class="depoimento-nome">Carlos Mendes</p>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div class="depoimento-box">
+            <div class="depoimento-img-box">
+              <img
+                src="img/clientes/cliente-3.jpg"
+                alt="Juliana Costa"
+                class="depoimento-img"
+              />
+            </div>
+            <div class="depoimento-text-box">
+              <div class="estrelas-avaliacao">
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+              </div>
+              <blockquote class="depoimento-text">
+                "Amo apoiar pequenos empreendedores e aqui encontro tudo em um
+                só lugar. Super recomendo!"
+              </blockquote>
+              <p class="depoimento-nome">Juliana Costa</p>
+            </div>
+          </div>
+
+          <!-- Depoimento 4 -->
+          <div class="depoimento-box">
+            <div class="depoimento-img-box">
+              <img
+                src="img/clientes/cliente-4.jpg"
+                alt="Roberto Almeida"
+                class="depoimento-img"
+              />
+            </div>
+            <div class="depoimento-text-box">
+              <div class="estrelas-avaliacao">
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+                <span class="estrela">★</span>
+              </div>
+              <blockquote class="depoimento-text">
+                "Produtos artesanais de alta qualidade. Já comprei várias vezes
+                e sempre superam expectativas."
+              </blockquote>
+              <p class="depoimento-nome">Roberto Almeida</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carrossel de Marcas -->
+        <div class="container center-text marcas-titulo">
+          <h3 class="heading-tertiary">Marcas que apoiamos</h3>
+        </div>
+
+        <div class="marcas-carrossel-container">
+          <div class="marcas-carrossel">
+            <div class="marca-item">
+              <img src="img/marcas/marca-1.png" alt="Marca 1" />
+            </div>
+            <div class="marca-item">
+              <img src="img/marcas/marca-2.png" alt="Marca 2" />
+            </div>
+            <div class="marca-item">
+              <img src="img/marcas/marca-3.png" alt="Marca 3" />
+            </div>
+            <div class="marca-item">
+              <img src="img/marcas/marca-4.png" alt="Marca 4" />
+            </div>
+            <div class="marca-item">
+              <img src="img/marcas/marca-5.png" alt="Marca 5" />
+            </div>
+            <div class="marca-item">
+              <img src="img/marcas/marca-6.png" alt="Marca 6" />
+            </div>
+            <div class="marca-item">
+              <img src="img/marcas/marca-7.png" alt="Marca 7" />
+            </div>
+            <div class="marca-item">
+              <img src="img/marcas/marca-8.png" alt="Marca 8" />
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer" id="contato">
+      <div class="container grid grid--footer">
+        <!-- Coluna Logo/Redes Sociais -->
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="img/popupshop-logo-branca.png"
+              alt="PopUpShop logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-pinterest"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2023</span> PopUpShop. Todos os
+            direitos reservados.
+          </p>
+        </div>
+
+        <!-- Coluna Endereço -->
+        <div class="address-col">
+          <p class="footer-heading">Nossa localização</p>
+          <address class="contacts">
+            <p class="address">
+              Rua dos Empreendedores, 123<br />
+              Vila Empreendedora<br />
+              São Paulo - SP, 04567-890
+            </p>
+            <p>
+              <a class="footer-link" href="tel:5511999999999">(11) 99999-9999</a
+              ><br />
+              <a class="footer-link" href="mailto:contato@popupshop.com.br"
+                >contato@popupshop.com.br</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <!-- Coluna Links Úteis -->
+        <nav class="nav-col">
+          <p class="footer-heading">Empresa</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">Sobre nós</a></li>
+            <li><a href="#" class="footer-link">Trabalhe conosco</a></li>
+            <li><a href="#" class="footer-link">Seja um fornecedor</a></li>
+            <li><a href="#" class="footer-link">Política de privacidade</a></li>
+            <li><a href="#" class="footer-link">Termos de uso</a></li>
+          </ul>
+        </nav>
+
+        <!-- Coluna Contato -->
+        <div class="form-col">
+          <p class="footer-heading">Fale conosco</p>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" placeholder="Nome" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="seu@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea
+                id="message"
+                placeholder="Mensagem..."
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn--form">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT CODE -->
+    <script defer src="js/script.js"></script>
   </body>
 </html>

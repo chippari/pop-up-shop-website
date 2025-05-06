@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do Empresário - PopUpShop</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BIBLIOTECA GRAFICOS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- BIBLIOTECA MAPAS -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          src="img/popupshop-logo.png"
+          alt="PopUpShop Logo"
+          class="popupshop-logo"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="index.html" class="main-nav-link">Home</a></li>
+          <li><a href="index.html#loja" class="main-nav-link">Loja</a></li>
+          <li><a href="index.html#sobre" class="main-nav-link">Sobre</a></li>
+          <li>
+            <a href="index.html#contato" class="main-nav-link">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Seção de Dashboard -->
+      <section class="section-empresario">
+        <div class="empresario-container">
+          <!-- Seção 1: Produtos Vendidos -->
+          <div class="empresario-section">
+            <h2 class="heading-secondary">Produtos Vendidos por Categoria</h2>
+            <div class="grafico-container">
+              <canvas id="graficoVendas"></canvas>
+            </div>
+            <div class="dados-adicionais">
+              <div class="dado-item">
+                <span class="dado-valor">1,248</span>
+                <span class="dado-label">Vendas este mês</span>
+              </div>
+              <div class="dado-item">
+                <span class="dado-valor">R$ 89,450</span>
+                <span class="dado-label">Faturamento</span>
+              </div>
+              <div class="dado-item">
+                <span class="dado-valor">4.8 ★</span>
+                <span class="dado-label">Avaliação média</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divisoria"></div>
+
+          <!-- Seção 2: Mapa de Regiões -->
+          <div class="empresario-section">
+            <h2 class="heading-secondary">Regiões com Mais Vendas</h2>
+            <div class="mapa-container" id="mapaRegioes"></div>
+            <div class="legenda-mapa">
+              <div class="legenda-item">
+                <span
+                  class="legenda-cor"
+                  style="background-color: #6d573e"
+                ></span>
+                <span class="legenda-texto">Maior volume</span>
+              </div>
+              <div class="legenda-item">
+                <span
+                  class="legenda-cor"
+                  style="background-color: #b59b7d"
+                ></span>
+                <span class="legenda-texto">Médio volume</span>
+              </div>
+              <div class="legenda-item">
+                <span
+                  class="legenda-cor"
+                  style="background-color: #dacdbe"
+                ></span>
+                <span class="legenda-texto">Menor volume</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="divisoria"></div>
+
+          <!-- Seção 3: Contador de Clientes -->
+          <div class="empresario-section">
+            <h2 class="heading-secondary">Base de Clientes Ativos</h2>
+            <div class="contador-clientes">
+              <span class="contador-numero" id="contadorClientes">146,700</span>
+              <span class="contador-texto">clientes ativos</span>
+            </div>
+            <div class="contador-info">
+              <p class="contador-tempo-real">
+                <span class="icone">↗</span>
+                <span class="texto">Novos cadastros em tempo real</span>
+              </p>
+              <p class="contador-taxa">+4 clientes a cada 15 segundos</p>
+            </div>
+          </div>
+
+          <div class="divisoria"></div>
+
+          <!-- Seção 4: Melhores Avaliações -->
+          <div class="empresario-section">
+            <h2 class="heading-secondary">Melhores Avaliações</h2>
+            <div class="avaliacoes-grid">
+              <!-- Avaliação 1 -->
+              <div class="avaliacao-box">
+                <div class="avaliacao-cabecalho">
+                  <img
+                    src="img/clientes/cliente-1.jpg"
+                    alt="Cliente"
+                    class="avaliacao-foto"
+                  />
+                  <div class="avaliacao-info">
+                    <p class="avaliacao-nome">Ana Silva</p>
+                    <div class="avaliacao-estrelas">★★★★★</div>
+                  </div>
+                </div>
+                <p class="avaliacao-texto">
+                  "Produtos de excelente qualidade! Meus clientes sempre elogiam
+                  e voltam a comprar."
+                </p>
+                <p class="avaliacao-data">15/05/2023</p>
+              </div>
+
+              <!-- Avaliação 2 -->
+              <div class="avaliacao-box">
+                <div class="avaliacao-cabecalho">
+                  <img
+                    src="img/clientes/cliente-2.jpg"
+                    alt="Cliente"
+                    class="avaliacao-foto"
+                  />
+                  <div class="avaliacao-info">
+                    <p class="avaliacao-nome">Carlos Mendes</p>
+                    <div class="avaliacao-estrelas">★★★★★</div>
+                  </div>
+                </div>
+                <p class="avaliacao-texto">
+                  "A plataforma é intuitiva e as vendas cresceram 40% desde que
+                  comecei a usar."
+                </p>
+                <p class="avaliacao-data">10/05/2023</p>
+              </div>
+
+              <!-- Avaliação 3 -->
+              <div class="avaliacao-box">
+                <div class="avaliacao-cabecalho">
+                  <img
+                    src="img/clientes/cliente-3.jpg"
+                    alt="Cliente"
+                    class="avaliacao-foto"
+                  />
+                  <div class="avaliacao-info">
+                    <p class="avaliacao-nome">Juliana Costa</p>
+                    <div class="avaliacao-estrelas">★★★★★</div>
+                  </div>
+                </div>
+                <p class="avaliacao-texto">
+                  "Ótima visibilidade para minha marca. O suporte ao empresário
+                  é excelente!"
+                </p>
+                <p class="avaliacao-data">03/05/2023</p>
+              </div>
+
+              <!-- Avaliação 4 -->
+              <div class="avaliacao-box">
+                <div class="avaliacao-cabecalho">
+                  <img
+                    src="img/clientes/cliente-4.jpg"
+                    alt="Cliente"
+                    class="avaliacao-foto"
+                  />
+                  <div class="avaliacao-info">
+                    <p class="avaliacao-nome">Roberto Almeida</p>
+                    <div class="avaliacao-estrelas">★★★★☆</div>
+                  </div>
+                </div>
+                <p class="avaliacao-texto">
+                  "Ferramentas de análise muito úteis para entender meu público
+                  e melhorar as vendas."
+                </p>
+                <p class="avaliacao-data">28/04/2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contato">
+      <div class="container grid grid--footer">
+        <!-- Coluna Logo/Redes Sociais -->
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="img/popupshop-logo-branca.png"
+              alt="PopUpShop logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-pinterest"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2023</span> PopUpShop. Todos os
+            direitos reservados.
+          </p>
+        </div>
+
+        <!-- Coluna Endereço -->
+        <div class="address-col">
+          <p class="footer-heading">Nossa localização</p>
+          <address class="contacts">
+            <p class="address">
+              Rua dos Empreendedores, 123<br />
+              Vila Empreendedora<br />
+              São Paulo - SP, 04567-890
+            </p>
+            <p>
+              <a class="footer-link" href="tel:5511999999999">(11) 99999-9999</a
+              ><br />
+              <a class="footer-link" href="mailto:contato@popupshop.com.br"
+                >contato@popupshop.com.br</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <!-- Coluna Links Úteis -->
+        <nav class="nav-col">
+          <p class="footer-heading">Empresa</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">Sobre nós</a></li>
+            <li><a href="#" class="footer-link">Trabalhe conosco</a></li>
+            <li><a href="#" class="footer-link">Seja um fornecedor</a></li>
+            <li><a href="#" class="footer-link">Política de privacidade</a></li>
+            <li><a href="#" class="footer-link">Termos de uso</a></li>
+          </ul>
+        </nav>
+
+        <!-- Coluna Contato -->
+        <div class="form-col">
+          <p class="footer-heading">Fale conosco</p>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" placeholder="Nome" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="seu@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea
+                id="message"
+                placeholder="Mensagem..."
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn--form">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/empresario.js"></script>
+  </body>
+</html>
