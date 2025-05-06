@@ -17,10 +17,13 @@
       rel="stylesheet"
     />
 
-    <!-- STYLES -->
+    <!-- CSS STYLES -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- JAVASCRIPT CODE -->
+    <script defer src="js/script.js"></script>
 
     <!-- SMOOTH SCROLLING SCRIPT FOR SAFARI  -->
     <script
@@ -42,10 +45,13 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a href="#loja" class="main-nav-link">Loja</a></li>
-          <li><a href="#sobre" class="main-nav-link">Sobre</a></li>
           <li>
             <a href="#clientes" class="main-nav-link">Clientes</a>
           </li>
+          <li>
+            <a href="#empresas" class="main-nav-link">Empresas</a>
+          </li>
+          <li><a href="#sobre" class="main-nav-link">Sobre</a></li>
           <li><a href="#contato" class="main-nav-link">Contato</a></li>
         </ul>
       </nav>
@@ -53,13 +59,123 @@
 
     <main>
       <section class="section-hero">
-        <div class="hero">
+        <div class="hero-slideshow">
+          <div
+            class="hero-slide"
+            style="background-image: url('img/popupshop-background-1.jpg')"
+          ></div>
+          <div
+            class="hero-slide"
+            style="background-image: url('img/popupshop-background-2.jpg')"
+          ></div>
+          <div
+            class="hero-slide"
+            style="background-image: url('img/popupshop-background-3.jpg')"
+          ></div>
+        </div>
+        <div class="hero-content">
           <div class="hero-text-box">
-            <h1 class="heading-primary">
+            <h1 class="heading-hero">
               Descubra marcas únicas e apoie pequenos empreendedores na
               PopUpShop
             </h1>
+
+            <a href="#sobre" class="btn btn--hero">Saiba Mais &darr;</a>
           </div>
+        </div>
+      </section>
+
+      <section class="section-mais-vendidos">
+        <div class="container center-text">
+          <span class="sub-heading">LOJA</span>
+          <h2 class="heading-secondary">Os Mais Vendidos</h2>
+        </div>
+
+        <div class="container grid grid--3-cols margin-right-md">
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-1.avif"
+                alt="Vestido Floral"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--vestidos">Vestidos</span>
+              </div>
+              <p class="mais-vendidos-title">Vestido Floral</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>100%</strong> Algodão</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Acabamento<strong> bem feitos</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-2.avif"
+                alt="Brincos de Argola"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--brincos">Brincos</span>
+              </div>
+              <p class="mais-vendidos-title">Brincos de Argola</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>Alta</strong> Qualidade</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Ouro <strong>18k</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mais-vendidos-box">
+            <div class="mais-vendidos-img-box">
+              <img
+                src="img/produtos/img-produto-3.avif"
+                alt="Esfoliante Facial"
+                class="mais-vendidos-img"
+              />
+            </div>
+            <div class="mais-vendidos-text-box">
+              <div class="mais-vendidos-tag-box">
+                <span class="mais-vendidos-tag tag--skin-care">Skin Care</span>
+              </div>
+              <p class="mais-vendidos-title">Esfoliante Facial</p>
+              <ul class="mais-vendidos-list">
+                <li class="mais-vendidos-attribute">
+                  <span><strong>100%</strong> Natural</span>
+                </li>
+                <li class="mais-vendidos-attribute">
+                  <span>Limpeza <strong>Profunda</strong></span>
+                </li>
+              </ul>
+              <div class="comprar-agora-btn">
+                <a href="#" class="btn btn--full">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mais-produtos">
+          <a href="#" class="link">Mais Produtos &rarr;</a>
         </div>
       </section>
     </main>
